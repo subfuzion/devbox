@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# mount the current directory on the host as ~/work in the container and
+# then make ~/work the container's current working directory
+CWD=/home/ec2-user/work
+docker run -it --rm --user ec2-user -v $PWD:/$CWD -w $CWD devbox
+
