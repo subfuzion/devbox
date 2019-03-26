@@ -3,4 +3,4 @@
 # mount the host current directory as a subdirectory under the user's home
 # directory in the container and make it the current working directory
 CWD=/home/ec2-user/$(basename $PWD)
-docker run -it --rm --user ec2-user -v $PWD:/$CWD -w $CWD devbox
+docker run -it --rm --user ec2-user -v $PWD:/$CWD -w $CWD devbox-node $@
